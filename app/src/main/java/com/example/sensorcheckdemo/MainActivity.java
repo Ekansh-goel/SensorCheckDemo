@@ -5,9 +5,17 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    private SensorManager sensorManager1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,5 @@ public class MainActivity extends AppCompatActivity {
             // Failure! No magnetometer.
             Toast.makeText(this, "THIS DEVICE DOESN'T SUPPORT THE SENSOR", Toast.LENGTH_LONG).show();
         }
-
     }
 }
